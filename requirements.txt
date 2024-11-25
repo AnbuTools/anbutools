@@ -1,0 +1,6 @@
+requests
+colorama
+playsound
+webbrowser
+pyfiglet
+init
