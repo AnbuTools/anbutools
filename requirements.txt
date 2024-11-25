@@ -1,6 +1,7 @@
 requests
 colorama
-playsound
+playsound==1.2.2
 webbrowser
 pyfiglet
 init
+ffmpeg
