@@ -35,7 +35,7 @@ def main_menu():
         if choice == "1":
             # Open Telegram
             
-            telegram_link = "https://t.me/YourID"  # Replace with your actual Telegram ID or link
+            telegram_link = "https://t.me/"  # Replace with your actual Telegram ID or link
             
             typing_effect("Opening Telegram ID...", Fore.YELLOW)
             
@@ -44,7 +44,7 @@ def main_menu():
         elif choice == "2":
             # Open What's app
 
-            Whatsapp_link ="https://wa.me/number"
+            Whatsapp_link ="https://wa.me/"
 
             typing_effect("Opening Whatsapp...", Fore.YELLOW)
 
