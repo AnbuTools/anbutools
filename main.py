@@ -25,7 +25,7 @@ def main_menu():
     typing_effect("Loading Please Wait ............", Fore.GREEN, delay=0.1)
 
     try:
-        playsound("./demo/welcome.mp3")
+        playsound("welcome.mp3")
         
     except Exception as e:
 
