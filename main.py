@@ -50,19 +50,19 @@ def main_menu():
         choice = input(Fore.GREEN + "\nEnter your choice (1-6): ")
 
         if choice == "1":
-            os.system("python ./demo/sms.py")
+            os.system("python sms.py")
 
         elif choice == "2":
-            os.system("python ./demo/call.py")
+            os.system("python call.py")
 
         elif choice == "3":
-            os.system("python ./demo/custom_sms.py")
+            os.system("python custom_sms.py")
 
         elif choice =="4":
-            os.system("python ./demo/sms_call.py")
+            os.system("python sms_call.py")
 
         elif choice =="5":
-            os.system("python ./demo/admin.py")
+            os.system("python ুadmin.py")
 
         elif choice == "6":
             typing_effect("\nExiting... Goodbye!", Fore.GREEN)
