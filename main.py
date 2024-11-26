@@ -1,8 +1,8 @@
 import os
 import time
 from colorama import Fore, init
-from playsound import playsound
 import pyfiglet
+import simpleaudio as sa  # simpleaudio লাইব্রেরি ব্যবহার
 
 # Colorama initialization (for Windows)
 init(autoreset=True)
@@ -14,21 +14,26 @@ def typing_effect(text, color=Fore.WHITE, delay=0.02):
         time.sleep(delay)
     print()
 
+# Function to play sound
+def play_sound(file_path):
+    try:
+        wave_obj = sa.WaveObject.from_wave_file(file_path)
+        play_obj = wave_obj.play()
+        play_obj.wait_done()
+    except Exception as e:
+        print(f"Error playing sound: {e}")
+
 def main_menu():
     # Welcome Screen with ASCII Art and Typing Effect
     ascii_art = pyfiglet.figlet_format("ANBU TOOLS", font="slant", width=200)
     typing_effect(ascii_art, Fore.GREEN)
 
-    
     # Play Welcome Sound
-
     typing_effect("Loading Please Wait ............", Fore.GREEN, delay=0.1)
 
     try:
-        playsound("welcome.mp3")
-        
+        play_sound("welcome.wav")  # Ensure the file format is .wav for simpleaudio
     except Exception as e:
-
         print(f"Error playing sound: {e}")
 
     # Main Menu with Green Color and Typing Effect
@@ -58,16 +63,14 @@ def main_menu():
         elif choice == "3":
             os.system("python custom_sms.py")
 
-        elif choice =="4":
+        elif choice == "4":
             os.system("python sms_call.py")
 
-        elif choice =="5":
-            os.system("python ুadmin.py")
+        elif choice == "5":
+            os.system("python admin.py")
 
         elif choice == "6":
             typing_effect("\nExiting... Goodbye!", Fore.GREEN)
-            
-            
             break
         else:
             typing_effect("Invalid choice. Please try again.", Fore.RED)
