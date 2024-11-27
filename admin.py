@@ -35,38 +35,31 @@ def main_menu():
         if choice == "1":
             # Open Telegram
             
-            telegram_link = "https://t.me/"  # Replace with your actual Telegram ID or link
+            webbrowser.open("https://t.me/")  # Replace with your actual Telegram ID or link
             
             typing_effect("Opening Telegram ID...", Fore.YELLOW)
             
-            webbrowser.open(telegram_link)
         
         elif choice == "2":
             # Open What's app
 
-            Whatsapp_link ="https://wa.me/"
+            webbrowser.open("https://wa.me/")
 
             typing_effect("Opening Whatsapp...", Fore.YELLOW)
-
-            webbrowser.open(Whatsapp_link)
         
         elif choice == "3":
             # Open Facebook
 
-            Facebook_link ="https://www.facebook.com/"
+            webbrowser.open("https://www.facebook.com/")
 
             typing_effect("Opening Facebook...", Fore.YELLOW)
-
-            webbrowser.open(Facebook_link)
 
         elif choice == "4":
             # Open Messenger
 
-            Messenger_link ="https://www.messenger.com/t/"
+            webbrowser.open("https://www.messenger.com/t/")
 
             typing_effect("Opening Messenger...", Fore.YELLOW)
-
-            webbrowser.open(Messenger_link)
         
 
         elif choice == "5":
