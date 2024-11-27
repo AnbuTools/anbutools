@@ -2,7 +2,6 @@ import os
 import time
 from colorama import Fore, init
 import pyfiglet
-import pygame
 
 # Colorama initialization (for Windows)
 init(autoreset=True)
@@ -14,14 +13,10 @@ def typing_effect(text, color=Fore.WHITE, delay=0.02):
         time.sleep(delay)
     print()
 
-# Function to play sound
+# Function to play sound using termux-media-player
 def play_sound(file_path):
     try:
-        pygame.mixer.init()
-        pygame.mixer.music.load(file_path)
-        pygame.mixer.music.play()
-        while pygame.mixer.music.get_busy():
-            pass
+        os.system(f"termux-media-player play {file_path}")
     except Exception as e:
         print(f"Error playing sound: {e}")
 
@@ -34,7 +29,7 @@ def main_menu():
     typing_effect("Loading Please Wait ............", Fore.GREEN, delay=0.1)
 
     try:
-        play_sound("welcome.wav")  # Use your audio file
+        play_sound("welcome.wav")  # Replace with your audio file
     except Exception as e:
         print(f"Error playing sound: {e}")
 
