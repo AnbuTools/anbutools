@@ -2,7 +2,7 @@ import os
 import time
 from colorama import Fore, init
 import pyfiglet
-import simpleaudio as sa  # simpleaudio লাইব্রেরি ব্যবহার
+import pygame
 
 # Colorama initialization (for Windows)
 init(autoreset=True)
@@ -17,9 +17,11 @@ def typing_effect(text, color=Fore.WHITE, delay=0.02):
 # Function to play sound
 def play_sound(file_path):
     try:
-        wave_obj = sa.WaveObject.from_wave_file(file_path)
-        play_obj = wave_obj.play()
-        play_obj.wait_done()
+        pygame.mixer.init()
+        pygame.mixer.music.load(file_path)
+        pygame.mixer.music.play()
+        while pygame.mixer.music.get_busy():
+            pass
     except Exception as e:
         print(f"Error playing sound: {e}")
 
@@ -32,7 +34,7 @@ def main_menu():
     typing_effect("Loading Please Wait ............", Fore.GREEN, delay=0.1)
 
     try:
-        play_sound("welcome.wav")  # Ensure the file format is .wav for simpleaudio
+        play_sound("welcome.wav")  # Use your audio file
     except Exception as e:
         print(f"Error playing sound: {e}")
 
