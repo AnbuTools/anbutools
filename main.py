@@ -22,7 +22,7 @@ def main_menu():
     typing_effect("Loading Please Wait ............", Fore.GREEN, delay=0.1)
 
     os.system("clear")
-    print("main_menu")
+    print(main_menu)
 
     # Main Menu with Green Color and Typing Effect
     while True:
