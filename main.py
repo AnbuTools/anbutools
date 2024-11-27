@@ -21,6 +21,10 @@ def main_menu():
     # Play Welcome Sound
     typing_effect("Loading Please Wait ............", Fore.GREEN, delay=0.1)
 
+    os.system("clear")
+    print("ascii_art"
+    print("typing_effect")
+
     # Main Menu with Green Color and Typing Effect
     while True:
         typing_effect("\nChoose an option:", Fore.GREEN)
