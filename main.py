@@ -28,11 +28,6 @@ def main_menu():
     # Play Welcome Sound
     typing_effect("Loading Please Wait ............", Fore.GREEN, delay=0.1)
 
-    try:
-        play_sound("welcome.wav")  # Replace with your audio file
-    except Exception as e:
-        print(f"Error playing sound: {e}")
-
     # Main Menu with Green Color and Typing Effect
     while True:
         typing_effect("\nChoose an option:", Fore.GREEN)
