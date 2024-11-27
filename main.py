@@ -13,13 +13,6 @@ def typing_effect(text, color=Fore.WHITE, delay=0.02):
         time.sleep(delay)
     print()
 
-# Function to play sound using termux-media-player
-def play_sound(file_path):
-    try:
-        os.system(f"termux-media-player play {file_path}")
-    except Exception as e:
-        print(f"Error playing sound: {e}")
-
 def main_menu():
     # Welcome Screen with ASCII Art and Typing Effect
     ascii_art = pyfiglet.figlet_format("ANBU TOOLS", font="slant", width=200)
