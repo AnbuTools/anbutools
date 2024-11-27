@@ -6,6 +6,9 @@ import pyfiglet
 # Colorama initialization (for Windows)
 init(autoreset=True)
 
+# Clear the screen before starting
+    os.system("clear")  # Clears terminal output in Termux/Linux
+
 # Function to simulate typing effect
 def typing_effect(text, color=Fore.WHITE, delay=0.02):
     for char in text:
