@@ -1,7 +1,6 @@
 import os
 import time
 from colorama import Fore, init
-from playsound import playsound
 import pyfiglet
 
 # Colorama initialization (for Windows)
