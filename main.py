@@ -31,13 +31,6 @@ def main_menu():
 
     typing_effect("Loading Please Wait ............", Fore.GREEN, delay=0.1)
 
-    try:
-        playsound("welcome.mp3")
-        
-    except Exception as e:
-
-        print(f"Error playing sound: {e}")
-
     # Main Menu with Green Color and Typing Effect
     while True:
         typing_effect("\nChoose an option:", Fore.GREEN, delay=0.1)
