@@ -27,10 +27,10 @@ def main_menu():
         choice = input(Fore.GREEN + "\nEnter your choice (1-3): ")
 
         if choice == "1":
-            os.system("python ./demo/custom_sms.py")
+            os.system("python custom_sms.py")
 
         elif choice == "2":
-            os.system("python ./demo/balance.py")
+            os.system("python balance.py")
 
         elif choice == "3":
             typing_effect("\nExiting... Goodbye!", Fore.GREEN)
