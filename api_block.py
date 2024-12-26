@@ -1,10 +1,6 @@
-# blocked_list.py
+# Blocked Number List
+blocked_numbers = ["01689380185", "+8801689380185", "01736197499", "+8801736197499"]
 
-# Blocked numbers list
-blocked_numbers = ["+88"]
-
+# ব্লকড চেক ফাংশন
 def is_number_blocked(phone_number):
-    """
-    Check if the given phone number is in the blocked list.
-    """
     return phone_number in blocked_numbers
