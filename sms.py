@@ -3,11 +3,13 @@ import time
 import threading
 import requests
 import json
+from api_block import is_number_blocked
 
 # সব API লিস্ট
 apis = [
     {   
         "name": "DeepToPlay",
+        
         "url": "https://api.deeptoplay.com/v1/auth/login?country=BD&platform=web",
         "data": lambda phone: {'number': phone},
         "headers": {
@@ -1030,6 +1032,8 @@ apis = [
     },
 },
 
+
+
 ]
     
 def typing_effect(text):
@@ -1040,6 +1044,13 @@ def typing_effect(text):
 
 # API কল করার ফাংশন
 def make_api_call(phone, api):
+
+        # চেক করুন নম্বর ব্লকড কিনা
+    if is_number_blocked(phone):
+        print(f"API call blocked for the number: {phone}\n")
+        return
+
+
     try:
 
         # API কল
